@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #06152C, #4E2666);
+    padding: 10px;
+    
+
+}
+
+.ToDoList{
+    width: 100%;
+    max-width: 550px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.ToDoList h2{
+    display: flex;
+    align-items: center;
+    color: #06152C;
+    margin-bottom: 20px;
+
+}
+.ToDoList h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: grid;
+    align-items: center;
+    background-color: rgb(207, 205, 205);
+    border-radius: 30px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+
+}
+.row input{
+   border: none;
+   outline: none;
+   background: transparent;
+   padding: 10px;
+   font-weight: 14px;
+   font-size: 14px;
+   border-radius: 30px;
+   padding-left: 22px;
+}
+.row button{
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    position: absolute;
+    height: 100%;
+    width: 25%;
+    justify-self:right;
+    font-size: 14px;
+    color: white;
+    background-color: rgb(255, 68, 0);
+    cursor: pointer;
+}
+ul{
+    margin-top: 25px;
+}
+ul li{
+    list-style: none;
+    user-select: none;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    left: 8px;
+
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url("images/checked.png");
+}
+ul li span{
+    font-size: 30px;
+    position: absolute;
+    right: 0px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+ul li span:hover{
+    background: #edeef0;
+}
+.error{
+    color: red;
+    padding: 15px;
+    padding-left: 21px;
+}
